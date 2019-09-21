@@ -1,0 +1,129 @@
+.container {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-image: url("../../assets/img/bg1.jpg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  padding: 100px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: grey 1px solid;
+}
+
+.title {
+  font-size: 60px;
+  padding-left: 30px;
+  padding-bottom: 100px;
+  font-family: "Bungee Outline", cursive;
+  color: black;
+}
+
+.App {
+  font-family: sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  max-width: 200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+label,
+input {
+  display: block;
+  width: 100%;
+  font-size: 15px;
+}
+
+label {
+  color: black;
+  margin-bottom: 5px;
+  height: 22px;
+}
+
+input {
+  margin-bottom: 40px;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000000;
+}
+
+input.error {
+  border-color: red;
+}
+
+.input-feedback {
+  color: rgb(235, 54, 54);
+  margin-top: -15px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+//BUTTON STYLING
+.btn-container {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+button {
+  border-radius: 100px;
+  width: 80px;
+  padding: 10px 15px;
+}
+
+//ICONS STYLING FOR INPUTFIELD
+.inputWithIcon input [type="text"] {
+  padding-left: 40px;
+}
+
+.inputWithIcon {
+  position: relative;
+}
+
+.inputWithIcon i {
+  position: absolute;
+  left: 180px;
+  top: 8px;
+  padding: 9px 8px;
+}
+
+.iconWithEmail {
+  background-image: url("../../assets/img/mail.png");
+  background-size: 30px;
+  width: 15px;
+  height: 15px;
+}
+
+.iconWithPassword {
+  background-image: url("../../assets/img/password.png");
+  background-size: 30px;
+  width: 15px;
+  height: 15px;
+}
+
+.link {
+  color: #333;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px 15px;
+}

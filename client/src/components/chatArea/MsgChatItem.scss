@@ -1,0 +1,122 @@
+.outer-box {
+  display: flex;
+  margin: 0em;
+  padding: 0em;
+  font-family: "Roboto", sans-serif;
+
+  // scroll-behavior: auto;
+  // overflow: auto;
+  &--mine {
+    justify-content: flex-end;
+  }
+
+  &--theirs {
+    justify-content: flex-start;
+  }
+
+  &--bot {
+    justify-content: center;
+  }
+
+  .inner-box {
+    position: relative;
+    border-radius: 0.4em;
+    max-width: 75%;
+    min-width: 25%;
+    padding: 0.2em 0.2em;
+    margin: 0.1em 0.1em;
+    color: black;
+
+    &--mine:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border: 1.031em solid transparent;
+      border-right-color: rgba(21, 204, 61, 0.5);
+      border-left: 0;
+      margin-top: -1.031em;
+      margin-left: -1.031em;
+    }
+
+    &--theirs:after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 0;
+      height: 0;
+      border: 1.031em solid transparent;
+      border-left-color: rgba(255, 5, 205, 0.5);
+      border-right: 0;
+      margin-top: -1.031em;
+      margin-right: -1.031em;
+    }
+
+    &--mine {
+      border-radius: 0.75em;
+      background-color: rgba(21, 204, 61, 0.5);
+    }
+
+    &--theirs {
+      border-radius: 0.75em;
+      background-color: rgba(255, 5, 205, 0.5);
+    }
+
+    &--bot {
+      border-radius: 0em;
+      padding: 0px 0px 0px 0px;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    &:hover .delete-icon {
+      opacity: 0.75;
+      color: black;
+      cursor: pointer;
+    }
+
+    .delete-icon {
+      opacity: 0;
+      color: rgba(0, 0, 0, 0.5);
+    }
+
+    .header-box {
+      display: flex;
+      justify-content: space-between;
+
+      &--mine {
+        color: white;
+      }
+
+      &--theirs {
+        color: white;
+      }
+
+      &--bot {
+        padding: 0px 0px 0px 0px;
+        color: white;
+      }
+    }
+
+    .content-box {
+      display: flex;
+      padding: 0.25em;
+    }
+    &--deleted {
+      padding: 0px 0px 0px 0px !important;
+      color: grey;
+      font-style: italic;
+      text-decoration: overline underline;
+    }
+
+    .footer-box {
+      display: flex;
+      justify-content: flex-end;
+      font-size: 0.75em;
+      font-style: italic;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.friendCardContainer {
+  width: 83vmax;
+  height: 80vmax;
+  display: flex;
+}
+
+.friendProfileContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.friendProfileContainerImg {
+  border: black 1px solid;
+  margin-top: 60px;
+  border-radius: 70%;
+  background-color: white;
+}

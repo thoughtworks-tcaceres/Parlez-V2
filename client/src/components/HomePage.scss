@@ -1,0 +1,89 @@
+.layout {
+  display: flex;
+  flex-direction: row;
+  height: 98vh;
+  border: black solid 1.5px;
+}
+
+.userHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 5px;
+  border-bottom: 1px black solid;
+}
+
+.contactsArea {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  width: 100%;
+  border-right: 1px black solid;
+}
+
+.chatAvatar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: black 1px solid;
+  padding: 2.5px;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.contacts {
+  justify-content: flex-start;
+  border: 1px solid black;
+  padding: 0;
+  height: 85vmax;
+  width: 25.3vmax;
+  overflow: auto;
+}
+
+.chatBox {
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
+  height: 740px;
+}
+
+.chatArea {
+  justify-content: flex-start;
+  width: 150vh;
+  height: 100vh;
+  overflow: auto;
+}
+
+.chatInput {
+  padding: 0;
+  justify-content: flex-end;
+}
+
+.emptyChat {
+  display: flex;
+  flex-direction: row;
+  width: 150vh;
+  height: 430px;
+  padding-top: 500px;
+  justify-content: center;
+}
+
+.friendListBox {
+  overflow: scroll;
+  height: 100%;
+  width: 25vh;
+}
+
+.emptyChatImgBox {
+  margin-bottom: 500px;
+}
+
+.emptyChatImg {
+  width: 200px;
+  height: 200px;
+}
+
+.chatAvatar {
+  display: flex;
+  max-height: 50px;
+}

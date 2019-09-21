@@ -1,0 +1,82 @@
+.addContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  align-items: center;
+  width: 300px;
+}
+.addGroupContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+}
+
+.addGroupContainerInside {
+  display: flex;
+  align-items: center;
+  border: red 3px solid;
+  width: 400px;
+  padding-bottom: 20px;
+  overflow: scroll;
+}
+
+.groupCheckBoxForm {
+  display: flex;
+  flex-direction: row;
+  max-height: 500px;
+  max-width: 500px;
+  overflow: scroll;
+
+  input[type="checkbox"] {
+    justify-content: flex-start;
+    border-radius: 3px;
+  }
+
+  img {
+    max-width: 50px;
+    justify-content: flex-end;
+  }
+}
+
+.singleIconSize {
+  width: 70px;
+  height: 70px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.groupIconSize {
+  width: 60px;
+  height: 60px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.singleChatBox {
+  width: 230px;
+  height: 120px;
+  align-items: center;
+}
+
+.groupChatBox {
+  width: 230px;
+  height: 120px;
+  align-items: center;
+}
+
+.singleFriendIconSize {
+  width: 50px;
+  height: 50px;
+  padding-right: 20px;
+}
+
+.singleChatFriend {
+  font-size: 15px;
+}
+
+.friendSection {
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
