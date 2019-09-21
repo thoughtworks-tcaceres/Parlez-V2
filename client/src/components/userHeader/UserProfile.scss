@@ -1,0 +1,48 @@
+.sideDrawerBox {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  bottom: 100%;
+  padding: 0px 20px;
+}
+
+.fullList {
+  width: auto;
+}
+.testGrid {
+  background-color: #fafafa;
+  border-bottom: 1px solid #d2d2d2;
+}
+
+.bigAvatarBox {
+  margin: 0px;
+  width: 350px;
+  height: 400px;
+  border: 3px red solid;
+  background-color: blue;
+  border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+.profileInfoBox {
+  padding-right: 50px;
+}
+
+.toolBox {
+  border: yellow dotted 4px;
+  margin-bottom: 30px;
+}
+
+.fab {
+  width: 40px;
+  height: 40px;
+  background-color: #3bcaef;
+}
+
+.editProfileContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}

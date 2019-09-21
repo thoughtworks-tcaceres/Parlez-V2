@@ -1,0 +1,48 @@
+.purple-square-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12em 4em;
+  background-size: cover;
+  background-image: url("../../assets/img/bg3.jpg");
+  border: black 5px solid;
+}
+
+.red-square {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 800px;
+  height: 500px;
+  border: rgb(219, 216, 216) 1px solid;
+  border-radius: 30px;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
+  -moz-box-shadow: 0 10px 6px -6px #777;
+  box-shadow: 0 10px 6px -6px #777;
+  background-color: white;
+}
+
+.input-box-area {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  width: 800px;
+  height: 500px;
+  padding-left: 80px;
+}
+
+.picture-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 1000px;
+  height: 500px;
+}
+
+.picture-box {
+  width: 300px;
+  height: 300px;
+}

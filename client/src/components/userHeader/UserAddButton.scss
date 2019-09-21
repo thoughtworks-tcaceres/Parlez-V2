@@ -1,0 +1,17 @@
+.addButton {
+  width: 50px;
+  height: 50px;
+}
+
+.addFriendModal {
+  position: fixed;
+  margin-right: 30px;
+  bottom: 0px;
+  top: 380px;
+  overflow: scroll;
+}
+
+.createChatModal {
+  position: fixed;
+  overflow: scroll;
+}

@@ -1,0 +1,18 @@
+.ChatProfileDrawerBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: red 3px dotted;
+}
+
+.bigAvatarBox {
+  margin: 0px;
+  width: 350px;
+  height: 400px;
+  border: 3px red solid;
+  background-color: blue;
+  border-radius: 50%;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}

@@ -1,0 +1,32 @@
+.addContainer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-items: center;
+  align-content: center;
+  border: 0.5px solid grey;
+}
+
+.foundFriendAvatar {
+  border: black 2px solid;
+}
+
+.foundFriendBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: grey solid 0.5px;
+  margin-top: 60px;
+  padding: 10px;
+  background-color: #f8f8f8;
+}
+
+.iconSize {
+  width: 30px;
+  height: 30px;
+}
+
+.resultLine {
+  padding-bottom: 10px;
+}
