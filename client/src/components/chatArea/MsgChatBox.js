@@ -11,7 +11,7 @@ const MsgChatBox = () => {
   return (
     <div>
       <textarea
-        placeholder="Enter Message ..."
+        placeholder="Enter Message..."
         onChange={msgContentChange}
         value={msgContent}
         maxLength={255}
