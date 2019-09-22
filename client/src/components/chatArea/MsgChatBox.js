@@ -16,8 +16,10 @@ const MsgChatBox = () => {
         value={msgContent}
         maxLength={255}
         rows={5}
+        autoFocus
+        style={{ resize: "none" }}
       ></textarea>
-      <i class="far fa-paper-plane fa-3x"></i>
+      <i className="far fa-paper-plane fa-3x"></i>
     </div>
   );
 };
