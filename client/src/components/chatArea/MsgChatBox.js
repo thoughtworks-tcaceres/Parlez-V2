@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import "./MsgChatBox.scss";
+// var classNames = require("classnames");
+import classNames from "classnames";
 
 const MsgChatBox = () => {
   const [msgContent, setMsgContent] = useState("");
+
+  const btnClass = classNames("far fa-paper-plane fa-3x", {
+    disabledBtn: msgContent.length === 0
+  });
 
   const msgContentChange = e => {
     setMsgContent(e.target.value);
@@ -36,7 +42,7 @@ const MsgChatBox = () => {
         autoFocus
         style={{ resize: "none" }}
       ></textarea>
-      <i id="submitBtn" className="far fa-paper-plane fa-3x" onClick={submitMessage}></i>
+      <i id="submitBtn" className={btnClass} onClick={submitMessage}></i>
     </div>
   );
 };
