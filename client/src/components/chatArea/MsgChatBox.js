@@ -5,9 +5,7 @@ const MsgChatBox = () => {
   const [msgContent, setMsgContent] = useState("");
 
   const msgContentChange = e => {
-    console.log("MESSAGE CONTENT 1: ", msgContent);
     setMsgContent(e.target.value);
-    console.log("MESSAGE CONTENT 2: ", msgContent);
   };
 
   const submitMessage = () => {
@@ -20,6 +18,7 @@ const MsgChatBox = () => {
   const keyUpHandler = e => {
     if (e.key === "Enter") {
       submitMessage();
+      console.log("this is the message that will be emitted :", msgContent);
       setMsgContent("");
     }
   };
