@@ -5,15 +5,23 @@ const MsgChatBox = () => {
   const [msgContent, setMsgContent] = useState("");
 
   const msgContentChange = e => {
+    console.log("MESSAGE CONTENT 1: ", msgContent);
     setMsgContent(e.target.value);
-    console.log(msgContent);
+    console.log("MESSAGE CONTENT 2: ", msgContent);
   };
 
   const submitMessage = () => {
     if (msgContent.length > 0) {
       //send message
+      setMsgContent("");
     }
-    setMsgContent("");
+  };
+
+  const keyUpHandler = e => {
+    if (e.key === "Enter") {
+      submitMessage();
+      setMsgContent("");
+    }
   };
 
   return (
@@ -29,7 +37,7 @@ const MsgChatBox = () => {
         autoFocus
         style={{ resize: "none" }}
       ></textarea>
-      <i className="submitBtn far fa-paper-plane fa-3x" onClick={submitMessage}></i>
+      <i id="submitBtn" className="far fa-paper-plane fa-3x" onClick={submitMessage}></i>
     </div>
   );
 };
