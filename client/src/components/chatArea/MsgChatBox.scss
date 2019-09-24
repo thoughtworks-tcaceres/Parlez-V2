@@ -4,13 +4,17 @@
 }
 
 #submitBtn {
-  cursor: pointer;
   border: 1px solid black;
   border-radius: 100%;
   padding: 15px;
+  // cursor: pointer;
 }
 
 .disabledBtn {
   opacity: 0.5;
-  cursor: none;
+  // cursor: none;
+}
+
+.enabledBtn {
+  cursor: pointer;
 }

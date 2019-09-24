@@ -7,7 +7,8 @@ const MsgChatBox = () => {
   const [msgContent, setMsgContent] = useState("");
 
   const btnClass = classNames("far fa-paper-plane fa-3x", {
-    disabledBtn: msgContent.length === 0
+    disabledBtn: msgContent.length === 0,
+    enabledBtn: msgContent.length !== 0
   });
 
   const msgContentChange = e => {
