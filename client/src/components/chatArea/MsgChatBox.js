@@ -16,8 +16,9 @@ const MsgChatBox = () => {
 
   const submitMessage = () => {
     if (msgContent.length > 0) {
-      setMsgContent("");
+      console.log(msgContent);
       //socket msg for sending message
+      setMsgContent("");
     }
   };
 
