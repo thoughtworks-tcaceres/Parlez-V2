@@ -1,18 +1,26 @@
+#chatArea {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 3px solid red;
+}
+
 #msgText {
   width: 80%;
   height: 60%;
+  resize: none;
 }
 
 #submitBtn {
   border: 1px solid black;
   border-radius: 100%;
   padding: 15px;
-  // cursor: pointer;
 }
 
 .disabledBtn {
   opacity: 0.5;
-  // cursor: none;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .enabledBtn {

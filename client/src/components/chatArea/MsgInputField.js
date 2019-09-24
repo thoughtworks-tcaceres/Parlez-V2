@@ -1,7 +1,6 @@
 import React, { useState, useContext } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
-// import { MsgContext } from "../../Context";
 import { ChatViewContext, MsgContext } from "../../Context";
 import { sendMessage } from "../../server_api";
 

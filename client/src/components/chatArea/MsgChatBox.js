@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./MsgChatBox.scss";
-// var classNames = require("classnames");
 import classNames from "classnames";
+import "./MsgChatBox.scss";
 
 const MsgChatBox = () => {
   const [msgContent, setMsgContent] = useState("");
@@ -17,21 +16,19 @@ const MsgChatBox = () => {
 
   const submitMessage = () => {
     if (msgContent.length > 0) {
-      //send message
       setMsgContent("");
+      //socket msg for sending message
     }
   };
 
   const keyUpHandler = e => {
     if (e.key === "Enter") {
       submitMessage();
-      console.log("this is the message that will be emitted :", msgContent);
-      setMsgContent("");
     }
   };
 
   return (
-    <div>
+    <div id="chatArea">
       <textarea
         id="msgText"
         placeholder="Enter Message ..."
@@ -41,7 +38,6 @@ const MsgChatBox = () => {
         maxLength={255}
         rows={5}
         autoFocus
-        style={{ resize: "none" }}
       ></textarea>
       <i id="submitBtn" className={btnClass} onClick={submitMessage}></i>
     </div>
