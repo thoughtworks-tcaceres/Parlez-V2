@@ -1,104 +1,47 @@
-import React, { useContext } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import "emoji-mart/css/emoji-mart.css";
-import { Picker } from "emoji-mart";
-
-import MsgEmojiIcon from "./MsgEmojiIcon";
-import MsgSubmitBtn from "./MsgSubmitBtn";
-import MsgInputField from "./MsgInputField";
-
-import { ChatViewContext, MsgContext } from "../../Context";
-import { sendMessage } from "../../server_api";
+import React, { useState } from "react";
+import classNames from "classnames";
+import "./MsgChatBox.scss";
 
 const MsgChatBox = () => {
-  const { masterState } = useContext(ChatViewContext);
-  const { msgState, dispatch } = useContext(MsgContext);
+  const [msgContent, setMsgContent] = useState("");
 
-  const message = {
-    userId: masterState.userId,
-    chatroomId: masterState.activeChat,
-    content: msgState.newMessage
+  const btnClass = classNames("far fa-paper-plane fa-3x", {
+    disabledBtn: msgContent.length === 0,
+    enabledBtn: msgContent.length !== 0
+  });
+
+  const msgContentChange = e => {
+    setMsgContent(e.target.value);
   };
 
-  const useStyles = makeStyles(theme => ({
-    button: {
-      margin: theme.spacing(1)
-    },
-    leftIcon: {
-      marginRight: theme.spacing(1)
-    },
-    rightIcon: {
-      marginLeft: theme.spacing(1)
-    },
-    iconSmall: {
-      fontSize: 20
-    },
-    container: {
-      display: "flex",
-      alignItems: "center",
-      margin: "0",
-      border: "1px black solid",
-      width: "100%"
-    },
-    emoji: {
-      padding: "1em"
+  const submitMessage = () => {
+    if (msgContent.length > 0) {
+      console.log(msgContent);
+      //socket msg for sending message
+      setMsgContent("");
     }
-  }));
-  const classes = useStyles();
-
-  const addEmoji = e => {
-    console.log("COUNT", msgState.charCount);
-    dispatch({ type: "MSG_AND_EMOJI", data: msgState.newMessage + e.native });
-    dispatch({ type: "UPDATE_COUNT", data: msgState.charCount + 1 });
-    dispatch({ type: "DISPLAY_COUNT" });
-    dispatch({ type: "CHECK_COUNT" });
   };
 
-  // const handleEnterKeyPress = event => {
-  //   if (event.key === "Enter") {
-  //     console.log("enter press here! ");
-  //   }
-  // };
+  const keyUpHandler = e => {
+    if (e.key === "Enter") {
+      submitMessage();
+    }
+  };
 
   return (
-    <Box className={classes.container}>
-      <Box className={classes.emoji}>
-        <MsgEmojiIcon
-          onClick={() => {
-            dispatch({ type: "SHOW_EMOJI" });
-          }}
-        ></MsgEmojiIcon>
-      </Box>
-      <MsgInputField></MsgInputField>
-      {msgState.showEmoji ? (
-        <span
-          style={{
-            position: "absolute",
-            bottom: 107
-          }}
-        >
-          <Picker
-            onSelect={addEmoji}
-            emojiTooltip={true}
-            showSkinTones={false}
-            showPreview={false}
-            color="#2952a3"
-            autoFocus={true}
-          />
-        </span>
-      ) : null}
-      <Box className={classes.emoji}>
-        <MsgSubmitBtn
-          disabled={msgState.msgBtnStatus}
-          onClick={e => {
-            e.preventDefault();
-            sendMessage(message);
-            dispatch({ type: "MESSAGE_SENT" });
-          }}
-        ></MsgSubmitBtn>
-      </Box>
-    </Box>
+    <div id="chatArea">
+      <textarea
+        id="msgText"
+        placeholder="Enter Message ..."
+        onChange={msgContentChange}
+        onKeyUp={keyUpHandler}
+        value={msgContent}
+        maxLength={255}
+        rows={5}
+        autoFocus
+      ></textarea>
+      <i id="submitBtn" className={btnClass} onClick={submitMessage}></i>
+    </div>
   );
 };
 
