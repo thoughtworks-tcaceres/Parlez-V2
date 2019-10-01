@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import "./SignUpPage.scss";
+import "./RegisterPage.scss";
 import { makeStyles } from "@material-ui/core/styles";
 import picbox from "../../assets/img/signup-image.jpg";
 import Button from "@material-ui/core/Button";
@@ -21,12 +21,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const SignUpPage = () => {
-  // const state = {
-  //   name: name,
-  //   email: email,
-  //   password: password
-  // };
-
   const { masterState, dispatch } = useContext(ChatViewContext);
 
   const [name, setName] = useState("");
